@@ -18,19 +18,19 @@ ANALYSIS FRAMEWORK
 ------------------
 
 1. SUCCESS CASE IDENTIFICATION
-   • High-confidence detections (score > 0.3)
-   • Correct class predictions with sufficient AP
-   • Distance-based performance stratification
+ • High-confidence detections (score > 0.3)
+ • Correct class predictions with sufficient AP
+ • Distance-based performance stratification
 
 2. FAILURE CASE CATEGORIZATION
-   • Low-confidence detections (score < 0.3)
-   • False positive identification
-   • Complete detection failures (0% AP classes)
+ • Low-confidence detections (score < 0.3)
+ • False positive identification
+ • Complete detection failures (0% AP classes)
 
 3. PERFORMANCE CORRELATION ANALYSIS
-   • Class frequency vs. detection success rates
-   • Confidence score distributions by object type
-   • Spatial performance patterns (distance-based)
+ • Class frequency vs. detection success rates
+ • Confidence score distributions by object type
+ • Spatial performance patterns (distance-based)
 
 METRICS AND EVALUATION
 ---------------------
@@ -43,4 +43,4 @@ VALIDATION APPROACH
 - Results validated against published TransFusion benchmarks
 - Cross-validation with multiple detection confidence thresholds
 - Systematic comparison with expected performance patterns
-        
+ 

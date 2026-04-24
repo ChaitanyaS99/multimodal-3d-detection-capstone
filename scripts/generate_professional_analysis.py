@@ -295,7 +295,7 @@ TECHNICAL SPECIFICATIONS
         with open('research_deliverables/reports/technical_analysis_report.txt', 'w') as f:
             f.write(report_content)
             
-        print("✅ Professional technical report generated")
+        print(" Professional technical report generated")
         
     def generate_methodology_summary(self):
         """Generate methodology documentation"""
@@ -350,7 +350,7 @@ VALIDATION APPROACH
         with open('research_deliverables/reports/methodology_documentation.txt', 'w') as f:
             f.write(methodology)
             
-        print("✅ Methodology documentation generated")
+        print(" Methodology documentation generated")
         
     def save_quantitative_data(self):
         """Save structured data for further analysis"""
@@ -374,37 +374,37 @@ VALIDATION APPROACH
         
         df_classes.to_csv('research_deliverables/data/class_performance_data.csv', index=False)
         
-        print("✅ Quantitative data saved in multiple formats")
+        print(" Quantitative data saved in multiple formats")
         
     def generate_all_deliverables(self):
         """Generate complete set of professional research deliverables"""
         
-        print("🔬 Generating Professional Research Deliverables...")
+        print(" Generating Professional Research Deliverables...")
         print("=" * 60)
         
         # Create all figures
         self.generate_figure_1_class_performance()
-        print("📊 Figure 1: Class performance analysis - Generated")
+        print(" Figure 1: Class performance analysis - Generated")
         
         self.generate_figure_2_distance_analysis()
-        print("📊 Figure 2: Distance-based analysis - Generated")
+        print(" Figure 2: Distance-based analysis - Generated")
         
         self.generate_figure_3_scaling_analysis()
-        print("📊 Figure 3: Scaling law visualization - Generated")
+        print(" Figure 3: Scaling law visualization - Generated")
         
         # Generate reports
         self.generate_professional_report()
-        print("📄 Technical analysis report - Generated")
+        print(" Technical analysis report - Generated")
         
         self.generate_methodology_summary()
-        print("📄 Methodology documentation - Generated")
+        print(" Methodology documentation - Generated")
         
         # Save quantitative data
         self.save_quantitative_data()
-        print("💾 Quantitative data exports - Generated")
+        print(" Quantitative data exports - Generated")
         
-        print("\n✅ ALL PROFESSIONAL DELIVERABLES COMPLETED")
-        print("📁 Location: research_deliverables/")
+        print("\n ALL PROFESSIONAL DELIVERABLES COMPLETED")
+        print(" Location: research_deliverables/")
         print("   ├── figures/ (PNG + PDF)")
         print("   ├── reports/ (Technical documentation)")
         print("   └── data/ (Quantitative results)")

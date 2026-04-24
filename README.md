@@ -5,7 +5,7 @@ A research capstone investigating multi-modal 3D object detection using the **Tr
 **Author:** Chaitanya Suralkar
 **Advisor:** Dr. Eungjoo Lee — University of Arizona
 **Program:** M.S. Data Science, University of Arizona
-**Course:** INFO 698 Capstone (Spring-2026)
+**Course:** INFO 698 — Capstone (Spring 2026)
 
 ---
 
@@ -29,32 +29,32 @@ This project implements a **TransFusion-based multimodal 3D detection pipeline**
 ```
 multimodal-3d-detection-capstone/
 │
-├── README.md                          Project overview and entry point
-├── requirements.txt                   Python dependencies
+├── README.md Project overview and entry point
+├── requirements.txt Python dependencies
 │
-├── docs/                              Detailed documentation
-│   ├── methodology.md                 Approach and experimental design
-│   ├── experiments.md                 Full experimental suite documented
-│   ├── results.md                     Findings, figures, and analysis
-│   ├── architecture.md                Model architecture details
-│   └── setup.md                       Installation and data preparation
+├── docs/ Detailed documentation
+│ ├── methodology.md Approach and experimental design
+│ ├── experiments.md Full experimental suite documented
+│ ├── results.md Findings, figures, and analysis
+│ ├── architecture.md Model architecture details
+│ └── setup.md Installation and data preparation
 │
-├── configs/                           Experimental configurations
-│   ├── README.md                      Guide to all config files
-│   └── transfusion_*.py               TransFusion variants and experiments
+├── configs/ Experimental configurations
+│ ├── README.md Guide to all config files
+│ └── transfusion_*.py TransFusion variants and experiments
 │
-├── scripts/                           Analysis and evaluation scripts
-│   ├── README.md                      Guide to all scripts
-│   └── *.py                           Evaluation, analysis, and inference tools
+├── scripts/ Analysis and evaluation scripts
+│ ├── README.md Guide to all scripts
+│ └── *.py Evaluation, analysis, and inference tools
 │
-├── results/                           Findings and artifacts
-│   ├── quantitative_results.json      Per-class AP and detection statistics
-│   ├── class_performance_data.csv     Tabular per-class results
-│   ├── figures/                       Generated charts and visualizations
-│   └── reports/                       Technical reports and assessments
+├── results/ Findings and artifacts
+│ ├── quantitative_results.json Per-class AP and detection statistics
+│ ├── class_performance_data.csv Tabular per-class results
+│ ├── figures/ Generated charts and visualizations
+│ └── reports/ Technical reports and assessments
 │
-└── poster/                            Capstone poster
-    └── Suralkar_Capstone_Poster.pdf
+└── poster/ Capstone poster
+ └── Suralkar_Capstone_Poster.pdf
 ```
 
 ## Getting Started

@@ -24,55 +24,55 @@ KEY FINDINGS
 ------------
 
 1. OVERALL PERFORMANCE
-   • Mean Average Precision (mAP): 8.23%
-   • Total Detections Analyzed: 16,200
-   • High-Confidence Detections: 101 (0.62% of total)
+ • Mean Average Precision (mAP): 8.23%
+ • Total Detections Analyzed: 16,200
+ • High-Confidence Detections: 101 (0.62% of total)
 
 2. CLASS-SPECIFIC PERFORMANCE ANALYSIS
 
-   SUCCESS CASES (AP > 30%):
-   • Vehicles: 37.4% AP 
-     - Detection Count: 3,910
-     - Maximum Confidence: 0.556
-     - Performance Pattern: Strong detection within 30m range
-   
-   • Pedestrians: 43.2% AP
-     - Detection Count: 1,011
-     - Maximum Confidence: 0.316
-     - Performance Pattern: Excellent safety-critical detection capability
+ SUCCESS CASES (AP > 30%):
+ • Vehicles: 37.4% AP 
+ - Detection Count: 3,910
+ - Maximum Confidence: 0.556
+ - Performance Pattern: Strong detection within 30m range
+ 
+ • Pedestrians: 43.2% AP
+ - Detection Count: 1,011
+ - Maximum Confidence: 0.316
+ - Performance Pattern: Excellent safety-critical detection capability
 
-   FAILURE CASES (AP < 5%):
-   • Large Vehicles: Trucks (0.7%), Buses (1.0%)
-   • Small Vehicles: Motorcycles, Bicycles (0% AP)
-   • Static Objects: Traffic cones, Barriers (0% AP despite high detection counts)
+ FAILURE CASES (AP < 5%):
+ • Large Vehicles: Trucks (0.7%), Buses (1.0%)
+ • Small Vehicles: Motorcycles, Bicycles (0% AP)
+ • Static Objects: Traffic cones, Barriers (0% AP despite high detection counts)
 
 3. CONFIDENCE CALIBRATION ANALYSIS
-   • Critical Finding: Model generates numerous detections with low confidence scores
-   • Vehicles: 97 high-confidence out of 3,910 total (2.5%)
-   • Indicates potential threshold optimization opportunity
+ • Critical Finding: Model generates numerous detections with low confidence scores
+ • Vehicles: 97 high-confidence out of 3,910 total (2.5%)
+ • Indicates potential threshold optimization opportunity
 
 4. DISTANCE-DEPENDENT PERFORMANCE
-   • Effective Detection Range: 0-30 meters
-   • Vehicle Performance: 12.5% AP (0.5m) → 56.4% AP (4.0m)
-   • Pedestrian Performance: 30.5% AP (0.5m) → 52.7% AP (4.0m)
+ • Effective Detection Range: 0-30 meters
+ • Vehicle Performance: 12.5% AP (0.5m) 56.4% AP (4.0m)
+ • Pedestrian Performance: 30.5% AP (0.5m) 52.7% AP (4.0m)
 
 RESEARCH IMPLICATIONS
 --------------------
 
 1. DATA SCALING REQUIREMENTS
-   • Current dataset (323 samples) approaches theoretical performance ceiling
-   • Projected scaling: 1,000 samples → ~18% mAP, 5,000 samples → ~35% mAP
-   • Full-scale performance (28,000 samples) → ~65% mAP
+ • Current dataset (323 samples) approaches theoretical performance ceiling
+ • Projected scaling: 1,000 samples ~18% mAP, 5,000 samples ~35% mAP
+ • Full-scale performance (28,000 samples) ~65% mAP
 
 2. MULTI-MODAL FUSION LIMITATIONS
-   • Complex fusion architectures show diminishing returns on limited datasets
-   • Hypothesis: LiDAR-only approaches may outperform multi-modal under data constraints
-   • Recommendation: Comparative study with single-modal baseline
+ • Complex fusion architectures show diminishing returns on limited datasets
+ • Hypothesis: LiDAR-only approaches may outperform multi-modal under data constraints
+ • Recommendation: Comparative study with single-modal baseline
 
 3. OPTIMIZATION OPPORTUNITIES
-   • Confidence threshold calibration may improve practical performance
-   • Class-specific optimization strategies warranted
-   • Focus on safety-critical classes (vehicles, pedestrians) shows promise
+ • Confidence threshold calibration may improve practical performance
+ • Class-specific optimization strategies warranted
+ • Focus on safety-critical classes (vehicles, pedestrians) shows promise
 
 CONCLUSIONS
 -----------
@@ -94,4 +94,4 @@ TECHNICAL SPECIFICATIONS
 - Software: PyTorch 1.7.1, MMDetection3D 0.11.0
 - Training Configuration: Single GPU, 6 epochs, AdamW optimizer
 - Evaluation Protocol: NuScenes standard metrics with distance-based AP calculation
-        
+ 

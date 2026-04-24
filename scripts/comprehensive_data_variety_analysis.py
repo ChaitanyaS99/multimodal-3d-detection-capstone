@@ -34,21 +34,21 @@ class DataVarietyAnalyzer:
             if os.path.exists(train_path):
                 with open(train_path, 'rb') as f:
                     self.train_infos = pickle.load(f)
-                print(f"✅ Loaded training info: {len(self.train_infos['infos'])} samples")
+                print(f" Loaded training info: {len(self.train_infos['infos'])} samples")
             else:
-                print(f"❌ Training info not found at {train_path}")
+                print(f" Training info not found at {train_path}")
                 
             # Load validation set info
             val_path = os.path.join(self.data_root, 'nuscenes_infos_val.pkl')
             if os.path.exists(val_path):
                 with open(val_path, 'rb') as f:
                     self.val_infos = pickle.load(f)
-                print(f"✅ Loaded validation info: {len(self.val_infos['infos'])} samples")
+                print(f" Loaded validation info: {len(self.val_infos['infos'])} samples")
             else:
-                print(f"❌ Validation info not found at {val_path}")
+                print(f" Validation info not found at {val_path}")
                 
         except Exception as e:
-            print(f"❌ Error loading dataset info: {e}")
+            print(f" Error loading dataset info: {e}")
             self.train_infos = None
             self.val_infos = None
             
@@ -76,7 +76,7 @@ class DataVarietyAnalyzer:
                 'total_count': total_count
             }
         else:
-            print("❌ Cannot analyze - dataset info not loaded")
+            print(" Cannot analyze - dataset info not loaded")
             
     def analyze_scene_diversity(self):
         """Analyze scene and environmental diversity"""
@@ -85,7 +85,7 @@ class DataVarietyAnalyzer:
         print("=" * 25)
         
         if not (self.train_infos and self.val_infos):
-            print("❌ Dataset info not available, using known NuScenes Mini characteristics")
+            print(" Dataset info not available, using known NuScenes Mini characteristics")
             self._analyze_known_scene_diversity()
             return
             
@@ -169,7 +169,7 @@ class DataVarietyAnalyzer:
         insufficient_classes = []
         
         for class_name, data in class_performance.items():
-            status = "✅ Good" if data['ap'] > 10 else "❌ Poor"
+            status = " Good" if data['ap'] > 10 else " Poor"
             variety_status = "High" if data['variety_score'] > 60 else "Low"
             
             print(f"{class_name:<20} {data['ap']:<8.1f} {data['estimated_samples']:<12} {variety_status:<10} {status}")
@@ -227,7 +227,7 @@ class DataVarietyAnalyzer:
             print(f"\n{aspect_name}:")
             for variety_name, data in varieties.items():
                 coverage = data['coverage']
-                status = "✅" if coverage > 60 else "⚠️" if coverage > 40 else "❌"
+                status = "" if coverage > 60 else "" if coverage > 40 else ""
                 print(f"  {status} {variety_name}: {coverage}% - {data['description']}")
         
         self.analysis_results['spatial_temporal'] = spatial_aspects
@@ -256,34 +256,34 @@ DETAILED ANALYSIS:
    - Sample density: Concentrated but sufficient for proof-of-concept
 
 2. SCENE & ENVIRONMENTAL DIVERSITY:
-   ✅ STRENGTHS:
+    STRENGTHS:
    - Geographic coverage: Multiple cities (Boston, Singapore)
    - Temporal diversity: Day/night cycles represented
    - Urban environment variety: Streets, intersections, parking areas
    - Weather conditions: Multiple lighting/weather scenarios
    
-   ⚠️ LIMITATIONS:
+    LIMITATIONS:
    - Limited extreme weather conditions
    - Constrained to urban environments
    - No highway/rural scenarios
 
 3. OBJECT CLASS VARIETY:
-   ✅ SUFFICIENT VARIETY (2/10 classes):
+    SUFFICIENT VARIETY (2/10 classes):
    - Cars: 37.4% AP - Well represented with good variety
    - Pedestrians: 43.2% AP - Diverse poses and positions
    
-   ❌ INSUFFICIENT VARIETY (8/10 classes):
+    INSUFFICIENT VARIETY (8/10 classes):
    - Trucks, buses, motorcycles, bicycles: <2% AP
    - Construction vehicles, trailers: 0% AP
    - Traffic infrastructure: Limited samples
 
 4. SPATIAL & GEOMETRIC VARIETY:
-   ✅ ADEQUATE:
+    ADEQUATE:
    - Detection ranges: Good near-field coverage
    - Object sizes: Medium objects well represented
    - Viewpoints: Multiple angles available
    
-   ⚠️ LIMITED:
+    LIMITED:
    - Far-field detection examples
    - Large vehicle variety
    - Heavy occlusion scenarios
@@ -291,16 +291,16 @@ DETAILED ANALYSIS:
 RESEARCH VALIDITY ASSESSMENT:
 
 SUITABLE FOR RESEARCH:
-✅ Multi-modal vs LiDAR-only comparison (cars & pedestrians)
-✅ Confidence calibration studies (sufficient successful detections)
-✅ Data constraint impact analysis (controlled limitation scenario)
-✅ Fusion mechanism evaluation (adequate variety in dominant classes)
+ Multi-modal vs LiDAR-only comparison (cars & pedestrians)
+ Confidence calibration studies (sufficient successful detections)
+ Data constraint impact analysis (controlled limitation scenario)
+ Fusion mechanism evaluation (adequate variety in dominant classes)
 
 NOT SUITABLE FOR RESEARCH:
-❌ Comprehensive 10-class detection optimization
-❌ Rare object class improvement studies
-❌ Cross-weather/environment generalization
-❌ Fine-grained object subcategory analysis
+ Comprehensive 10-class detection optimization
+ Rare object class improvement studies
+ Cross-weather/environment generalization
+ Fine-grained object subcategory analysis
 
 RECOMMENDATION FOR DR. LEE:
 
@@ -332,7 +332,7 @@ for comprehensive multi-class analysis.
         with open('Data_Variety_Assessment_Report_Dr_Lee.txt', 'w') as f:
             f.write(report)
             
-        print("✅ Comprehensive assessment report saved: Data_Variety_Assessment_Report_Dr_Lee.txt")
+        print(" Comprehensive assessment report saved: Data_Variety_Assessment_Report_Dr_Lee.txt")
         return report
 
     def create_visualization_dashboard(self):
@@ -428,18 +428,18 @@ for comprehensive multi-class analysis.
         ax6.axis('off')
         summary_text = """OVERALL ASSESSMENT
 
-✅ STRENGTHS:
+ STRENGTHS:
 - Cars & pedestrians well-represented
 - Multi-modal comparison valid
 - Confidence studies feasible
 - Data constraint research valid
 
-⚠️ LIMITATIONS:
+ LIMITATIONS:
 - 8/10 classes insufficient
 - Limited weather variety
 - Constrained scenarios
 
-🎯 RECOMMENDATION:
+ RECOMMENDATION:
 PROCEED with refined scope
 Focus on dominant classes
 Acknowledge limitations"""
@@ -451,7 +451,7 @@ Acknowledge limitations"""
         plt.savefig('Data_Variety_Dashboard_Dr_Lee.png', dpi=300, bbox_inches='tight', facecolor='white')
         plt.close()
         
-        print("✅ Visualization dashboard saved: Data_Variety_Dashboard_Dr_Lee.png")
+        print(" Visualization dashboard saved: Data_Variety_Dashboard_Dr_Lee.png")
 
     def run_complete_analysis(self):
         """Run complete data variety analysis"""
@@ -476,13 +476,13 @@ Acknowledge limitations"""
         print("\n" + "=" * 55)
         print("DATA VARIETY ANALYSIS COMPLETE")
         print("=" * 30)
-        print("✅ Dataset assessment: MIXED VARIETY")
-        print("✅ Research validity: CONFIRMED for dominant classes")
-        print("📋 Recommendation: PROCEED with refined scope")
-        print("📊 Files generated:")
+        print(" Dataset assessment: MIXED VARIETY")
+        print(" Research validity: CONFIRMED for dominant classes")
+        print(" Recommendation: PROCEED with refined scope")
+        print(" Files generated:")
         print("   - Data_Variety_Assessment_Report_Dr_Lee.txt")
         print("   - Data_Variety_Dashboard_Dr_Lee.png")
-        print("\n🎯 READY FOR DR. LEE REVIEW")
+        print("\n READY FOR DR. LEE REVIEW")
 
 if __name__ == "__main__":
     analyzer = DataVarietyAnalyzer()

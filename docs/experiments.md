@@ -114,11 +114,11 @@ To reproduce any of the experiments above:
 ```bash
 # Train
 python tools/train.py configs/<config_name>.py \
-    --work-dir work_dirs/<run_name>
+ --work-dir work_dirs/<run_name>
 
 # Evaluate
 python tools/test.py configs/<config_name>.py \
-    work_dirs/<run_name>/epoch_N.pth --eval bbox
+ work_dirs/<run_name>/epoch_N.pth --eval bbox
 ```
 
 See [`setup.md`](setup.md) for environment setup.

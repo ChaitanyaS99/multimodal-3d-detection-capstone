@@ -35,7 +35,7 @@ The pipeline operates in two main stages:
 | Component | Configuration |
 |---|---|
 | Backbone | `ResNet-50`, 4 stages, frozen first stage |
-| Neck | `FPN` with input channels [256, 512, 1024, 2048] → output 256 |
+| Neck | `FPN` with input channels [256, 512, 1024, 2048] output 256 |
 
 ### Detection Head
 

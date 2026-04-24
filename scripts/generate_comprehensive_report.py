@@ -60,7 +60,7 @@ The research implements TransFusion multi-modal 3D object detection architecture
 
 Dataset Configuration:
 - Training Data: 323 samples from NuScenes mini-subset
-- Validation Data: 81 samples for performance evaluation  
+- Validation Data: 81 samples for performance evaluation 
 - Object Classes: 10 categories including vehicles, pedestrians, and static objects
 - Data Modalities: LiDAR point clouds and 6-view camera images
 
@@ -144,14 +144,14 @@ Distance-Based Performance Analysis:
 
 Vehicle Detection Performance by Range:
 - 0.5 meter threshold: {self.results_data['distance_metrics']['car']['0.5m']} percent AP
-- 1.0 meter threshold: {self.results_data['distance_metrics']['car']['1.0m']} percent AP  
+- 1.0 meter threshold: {self.results_data['distance_metrics']['car']['1.0m']} percent AP 
 - 2.0 meter threshold: {self.results_data['distance_metrics']['car']['2.0m']} percent AP
 - 4.0 meter threshold: {self.results_data['distance_metrics']['car']['4.0m']} percent AP
 
 Pedestrian Detection Performance by Range:
 - 0.5 meter threshold: {self.results_data['distance_metrics']['pedestrian']['0.5m']} percent AP
 - 1.0 meter threshold: {self.results_data['distance_metrics']['pedestrian']['1.0m']} percent AP
-- 2.0 meter threshold: {self.results_data['distance_metrics']['pedestrian']['2.0m']} percent AP  
+- 2.0 meter threshold: {self.results_data['distance_metrics']['pedestrian']['2.0m']} percent AP 
 - 4.0 meter threshold: {self.results_data['distance_metrics']['pedestrian']['4.0m']} percent AP
 
 Critical Findings:
@@ -206,7 +206,7 @@ Data Scaling Requirements:
 The empirical results establish quantitative relationships between dataset size and detection performance. Current performance with 323 training samples approaches theoretical ceiling for the given architecture and data complexity. Scaling projections indicate:
 
 - 1,000 samples: Expected 15-25 percent mAP improvement
-- 5,000 samples: Projected 30-40 percent mAP performance  
+- 5,000 samples: Projected 30-40 percent mAP performance 
 - 28,000 samples: Theoretical approach to published benchmark (65 percent mAP)
 
 These projections follow power-law scaling relationships commonly observed in deep learning systems, providing quantitative guidance for research resource allocation decisions.
@@ -229,7 +229,7 @@ Safety-Critical Application Viability:
 Vehicle and pedestrian detection performance levels indicate functional capability for specific autonomous driving applications. The achieved performance suggests viability for:
 
 - Highway assistance systems with reduced complexity requirements
-- Pedestrian safety applications in controlled environments  
+- Pedestrian safety applications in controlled environments 
 - Research and development platforms for algorithm testing
 
 However, complete autonomous driving capability requires improved performance across all object categories, particularly rare vehicle types and static objects.
@@ -253,7 +253,7 @@ Key research contributions include:
 
 1. Empirical quantification of detection performance boundaries under severe data constraints
 2. Systematic categorization of success and failure patterns across object classes
-3. Identification of confidence calibration challenges and optimization opportunities  
+3. Identification of confidence calibration challenges and optimization opportunities 
 4. Establishment of baseline performance metrics for future comparative studies
 5. Quantitative guidance for data scaling and research resource allocation decisions
 
@@ -354,7 +354,7 @@ This research presents a systematic analysis of multi-modal 3D object detection 
 TABLE OF CONTENTS
 
 1. Executive Summary
-2. Research Methodology  
+2. Research Methodology 
 3. Experimental Results
 4. Detailed Analysis and Interpretation
 5. Research Implications and Future Directions

@@ -25,7 +25,7 @@ scores = torch.tensor([0.1666, 0.2494, 0.2004, 0.2528, 0.1941, 0.2306, 0.2383, 0
         0.2065, 0.1636, 0.1703, 0.1444, 0.1735, 0.1926, 0.1569, 0.1947, 0.2090,
         0.1766, 0.1471])
 
-print("🏆 REAL TRANSFUSION DETECTION PERFORMANCE")
+print(" REAL TRANSFUSION DETECTION PERFORMANCE")
 print("=" * 50)
 
 total_detections = len(scores)
@@ -34,29 +34,29 @@ max_confidence = scores.max().item()
 high_conf = (scores > 0.2).sum().item()
 medium_conf = (scores > 0.15).sum().item()
 
-print(f"📊 DETECTION STATISTICS:")
-print(f"   Total detections: {total_detections}")
-print(f"   Average confidence: {avg_confidence:.3f}")
-print(f"   Maximum confidence: {max_confidence:.3f}")
-print(f"   High confidence (>0.2): {high_conf}")
-print(f"   Medium confidence (>0.15): {medium_conf}")
+print(f" DETECTION STATISTICS:")
+print(f" Total detections: {total_detections}")
+print(f" Average confidence: {avg_confidence:.3f}")
+print(f" Maximum confidence: {max_confidence:.3f}")
+print(f" High confidence (>0.2): {high_conf}")
+print(f" Medium confidence (>0.15): {medium_conf}")
 
 # Calculate realistic mAP based on actual detections
 # Assume ~20-30 ground truth objects per scene (typical for NuScenes)
 estimated_gt = 25
-precision = min(0.4, high_conf / total_detections)  # Conservative precision
-recall = min(0.3, high_conf / estimated_gt)         # Conservative recall
+precision = min(0.4, high_conf / total_detections) # Conservative precision
+recall = min(0.3, high_conf / estimated_gt) # Conservative recall
 f1 = 2 * (precision * recall) / (precision + recall) if (precision + recall) > 0 else 0
 real_map = f1 * avg_confidence * 100
 
-print(f"\n📈 PERFORMANCE CALCULATION:")
-print(f"   Estimated GT objects: {estimated_gt}")
-print(f"   Precision estimate: {precision:.3f}")
-print(f"   Recall estimate: {recall:.3f}")
-print(f"   F1-Score: {f1:.3f}")
-print(f"   REAL mAP: {real_map:.2f}")
+print(f"\n PERFORMANCE CALCULATION:")
+print(f" Estimated GT objects: {estimated_gt}")
+print(f" Precision estimate: {precision:.3f}")
+print(f" Recall estimate: {recall:.3f}")
+print(f" F1-Score: {f1:.3f}")
+print(f" REAL mAP: {real_map:.2f}")
 
-print(f"\n🎯 FINAL RESULT:")
-print(f"   TransFusion achieved {real_map:.1f} mAP with partial weights")
-print(f"   With full training: Expected ~68.9 mAP (paper target)")
-print(f"   Current achievement: {real_map/68.9*100:.1f}% of paper performance")
+print(f"\n FINAL RESULT:")
+print(f" TransFusion achieved {real_map:.1f} mAP with partial weights")
+print(f" With full training: Expected ~68.9 mAP (paper target)")
+print(f" Current achievement: {real_map/68.9*100:.1f}% of paper performance")

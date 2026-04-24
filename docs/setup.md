@@ -70,18 +70,18 @@ data/nuscenes/
 ├── maps/
 ├── samples/
 ├── sweeps/
-├── v1.0-mini/      (or v1.0-trainval)
-└── nuscenes_infos_train.pkl     (generated in next step)
+├── v1.0-mini/ (or v1.0-trainval)
+└── nuscenes_infos_train.pkl (generated in next step)
 ```
 
 ### Generate the info files
 
 ```bash
 python tools/create_data.py nuscenes \
-    --root-path ./data/nuscenes \
-    --out-dir ./data/nuscenes \
-    --extra-tag nuscenes \
-    --version v1.0-mini
+ --root-path ./data/nuscenes \
+ --out-dir ./data/nuscenes \
+ --extra-tag nuscenes \
+ --version v1.0-mini
 ```
 
 For the full dataset, replace `v1.0-mini` with `v1.0-trainval`.
@@ -109,9 +109,9 @@ python tools/train.py configs/transfusion_nusc_voxel_LC.py --work-dir work_dirs/
 
 ```bash
 python tools/test.py \
-    configs/transfusion_nusc_voxel_LC.py \
-    work_dirs/baseline_multimodal/epoch_6.pth \
-    --eval bbox
+ configs/transfusion_nusc_voxel_LC.py \
+ work_dirs/baseline_multimodal/epoch_6.pth \
+ --eval bbox
 ```
 
 ### Run an experiment variant

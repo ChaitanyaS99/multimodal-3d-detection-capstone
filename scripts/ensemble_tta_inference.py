@@ -20,15 +20,15 @@ def ensemble_tta_evaluation():
     ]
     
     # Load ensemble models
-    print("🚀 Loading ensemble models...")
+    print(" Loading ensemble models...")
     models = []
     for i, ckpt in enumerate(checkpoints):
         if os.path.exists(ckpt):
             model = init_detector(cfg, ckpt, device='cuda:0')
             models.append(model)
-            print(f"✅ Model {i+1}: {ckpt}")
+            print(f" Model {i+1}: {ckpt}")
     
-    print(f"📊 Ensemble size: {len(models)} models")
+    print(f" Ensemble size: {len(models)} models")
     
     # TTA configurations (multiple test augmentations)
     tta_configs = [
@@ -52,8 +52,8 @@ def ensemble_tta_evaluation():
     # Load validation dataset
     val_dataset = build_dataset(cfg.data.val)
     
-    print("🎯 Starting Ensemble + TTA evaluation...")
-    print(f"📊 Total combinations: {len(models)} models × {len(tta_configs)} TTA = {len(models) * len(tta_configs)} predictions per sample")
+    print(" Starting Ensemble + TTA evaluation...")
+    print(f" Total combinations: {len(models)} models × {len(tta_configs)} TTA = {len(models) * len(tta_configs)} predictions per sample")
     
     # Run evaluation (simplified version - full implementation would be more complex)
     all_results = []
@@ -73,9 +73,9 @@ def ensemble_tta_evaluation():
         all_results.append(averaged_result)
         
         if (i + 1) % 1 == 0:
-            print(f"📈 Processed {i+1}/5 samples")
+            print(f" Processed {i+1}/5 samples")
     
-    print("✅ Ensemble + TTA inference complete!")
+    print(" Ensemble + TTA inference complete!")
     return all_results
 
 def average_predictions(results):
@@ -90,4 +90,4 @@ def average_predictions(results):
 
 if __name__ == "__main__":
     results = ensemble_tta_evaluation()
-    print("🎉 Ensemble + TTA evaluation completed!")
+    print(" Ensemble + TTA evaluation completed!")

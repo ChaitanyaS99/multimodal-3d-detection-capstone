@@ -11,45 +11,45 @@ on dominant object classes but limited for comprehensive multi-class studies.
 DETAILED ANALYSIS:
 
 1. BASIC STATISTICS:
-   - Total samples: 404
-   - Training/validation split: 323/81 (appropriate)
-   - Sample density: Concentrated but sufficient for proof-of-concept
+ - Total samples: 404
+ - Training/validation split: 323/81 (appropriate)
+ - Sample density: Concentrated but sufficient for proof-of-concept
 
 2. SCENE & ENVIRONMENTAL DIVERSITY:
-   ✅ STRENGTHS:
-   - Geographic coverage: Multiple cities (Boston, Singapore)
-   - Temporal diversity: Day/night cycles represented  
-   - Urban environment variety: Streets, intersections, parking areas
-   - Weather conditions: Multiple lighting/weather scenarios
-   
-   ⚠️ LIMITATIONS:
-   - Limited extreme weather conditions
-   - Constrained to urban environments
-   - No highway/rural scenarios
+ STRENGTHS:
+ - Geographic coverage: Multiple cities (Boston, Singapore)
+ - Temporal diversity: Day/night cycles represented 
+ - Urban environment variety: Streets, intersections, parking areas
+ - Weather conditions: Multiple lighting/weather scenarios
+ 
+ LIMITATIONS:
+ - Limited extreme weather conditions
+ - Constrained to urban environments
+ - No highway/rural scenarios
 
 3. OBJECT CLASS VARIETY:
-   ✅ SUFFICIENT VARIETY (2//10 classes):
-   - Cars: 37.4% AP - Well represented with good variety
-   - Pedestrians: 43.2% AP - Diverse poses and positions
-   
-   ❌ INSUFFICIENT VARIETY (8//10 classes):
-   - Trucks, buses, motorcycles, bicycles: <2% AP
-   - Construction vehicles, trailers: 0% AP
-   - Traffic infrastructure: Limited samples
+ SUFFICIENT VARIETY (2//10 classes):
+ - Cars: 37.4% AP - Well represented with good variety
+ - Pedestrians: 43.2% AP - Diverse poses and positions
+ 
+ INSUFFICIENT VARIETY (8//10 classes):
+ - Trucks, buses, motorcycles, bicycles: <2% AP
+ - Construction vehicles, trailers: 0% AP
+ - Traffic infrastructure: Limited samples
 
 4. RESEARCH VALIDITY ASSESSMENT:
 
 SUITABLE FOR RESEARCH:
-✅ Multi-modal vs LiDAR-only comparison (cars & pedestrians)
-✅ Confidence calibration studies (sufficient successful detections)  
-✅ Data constraint impact analysis (controlled limitation scenario)
-✅ Fusion mechanism evaluation (adequate variety in dominant classes)
+ Multi-modal vs LiDAR-only comparison (cars & pedestrians)
+ Confidence calibration studies (sufficient successful detections) 
+ Data constraint impact analysis (controlled limitation scenario)
+ Fusion mechanism evaluation (adequate variety in dominant classes)
 
 NOT SUITABLE FOR RESEARCH:
-❌ Comprehensive 10-class detection optimization
-❌ Rare object class improvement studies
-❌ Cross-weather/environment generalization
-❌ Fine-grained object subcategory analysis
+ Comprehensive 10-class detection optimization
+ Rare object class improvement studies
+ Cross-weather/environment generalization
+ Fine-grained object subcategory analysis
 
 RECOMMENDATION FOR DR. LEE:
 
@@ -77,6 +77,6 @@ cars and pedestrians, with clear acknowledgment of dataset limitations
 for comprehensive multi-class analysis.
 
 VARIETY SCORE: 20.0% overall class coverage
-RESEARCH VALIDITY: ✅ CONFIRMED for dominant classes
-RECOMMENDATION: ✅ PROCEED with refined scope
-        
+RESEARCH VALIDITY: CONFIRMED for dominant classes
+RECOMMENDATION: PROCEED with refined scope
+ 

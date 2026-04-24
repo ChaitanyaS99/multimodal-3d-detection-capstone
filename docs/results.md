@@ -1,6 +1,6 @@
 # Results & Analysis
 
-This document presents the quantitative results, analytical findings, and key insights from the experimental work performed in this project.
+This document presents the quantitative results, analytical findings, and key insights from the experimental work in this project.
 
 ---
 
@@ -37,7 +37,7 @@ Source: `results/quantitative_results.json`
 
 - **Strong, reliable detection** on the two most safety-critical classes (Cars, Pedestrians)
 - **Significant detection counts on rare classes** (Traffic Cones at 7,428 predictions, Barriers at 2,493) but with very low confidence — indicating a calibration challenge rather than a detection failure
-- **Underrepresented classes** (Trucks, Buses, Motorcycles, Bicycles) suffer from limited training samples in the mini dataset
+- **Underrepresented classes** (Trucks, Buses, Motorcycles, Bicycles) suffer from limited training samples in the mini subset
 
 ---
 

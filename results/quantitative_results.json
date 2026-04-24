@@ -1,79 +1,79 @@
 {
-  "overall_map": 8.23,
-  "class_performance": {
-    "car": {
-      "ap": 37.4,
-      "detections": 3910,
-      "high_conf": 97,
-      "max_score": 0.556
-    },
-    "truck": {
-      "ap": 0.7,
-      "detections": 357,
-      "high_conf": 0,
-      "max_score": 0.093
-    },
-    "bus": {
-      "ap": 1.0,
-      "detections": 106,
-      "high_conf": 0,
-      "max_score": 0.053
-    },
-    "trailer": {
-      "ap": 0.0,
-      "detections": 217,
-      "high_conf": 0,
-      "max_score": 0.071
-    },
-    "construction_vehicle": {
-      "ap": 0.0,
-      "detections": 2,
-      "high_conf": 0,
-      "max_score": 0.004
-    },
-    "pedestrian": {
-      "ap": 43.2,
-      "detections": 1011,
-      "high_conf": 1,
-      "max_score": 0.316
-    },
-    "motorcycle": {
-      "ap": 0.0,
-      "detections": 419,
-      "high_conf": 0,
-      "max_score": 0.034
-    },
-    "bicycle": {
-      "ap": 0.0,
-      "detections": 257,
-      "high_conf": 0,
-      "max_score": 0.022
-    },
-    "traffic_cone": {
-      "ap": 0.0,
-      "detections": 7428,
-      "high_conf": 3,
-      "max_score": 0.321
-    },
-    "barrier": {
-      "ap": 0.0,
-      "detections": 2493,
-      "high_conf": 0,
-      "max_score": 0.223
-    }
-  },
-  "distance_performance": {
-    "car": [
-      12.49,
-      30.87,
-      49.65,
-      56.43
-    ],
-    "pedestrian": [
-      30.5,
-      42.79,
-      46.95,
-      52.66
-    ]
-  }
+ "overall_map": 8.23,
+ "class_performance": {
+ "car": {
+ "ap": 37.4,
+ "detections": 3910,
+ "high_conf": 97,
+ "max_score": 0.556
+ },
+ "truck": {
+ "ap": 0.7,
+ "detections": 357,
+ "high_conf": 0,
+ "max_score": 0.093
+ },
+ "bus": {
+ "ap": 1.0,
+ "detections": 106,
+ "high_conf": 0,
+ "max_score": 0.053
+ },
+ "trailer": {
+ "ap": 0.0,
+ "detections": 217,
+ "high_conf": 0,
+ "max_score": 0.071
+ },
+ "construction_vehicle": {
+ "ap": 0.0,
+ "detections": 2,
+ "high_conf": 0,
+ "max_score": 0.004
+ },
+ "pedestrian": {
+ "ap": 43.2,
+ "detections": 1011,
+ "high_conf": 1,
+ "max_score": 0.316
+ },
+ "motorcycle": {
+ "ap": 0.0,
+ "detections": 419,
+ "high_conf": 0,
+ "max_score": 0.034
+ },
+ "bicycle": {
+ "ap": 0.0,
+ "detections": 257,
+ "high_conf": 0,
+ "max_score": 0.022
+ },
+ "traffic_cone": {
+ "ap": 0.0,
+ "detections": 7428,
+ "high_conf": 3,
+ "max_score": 0.321
+ },
+ "barrier": {
+ "ap": 0.0,
+ "detections": 2493,
+ "high_conf": 0,
+ "max_score": 0.223
+ }
+ },
+ "distance_performance": {
+ "car": [
+ 12.49,
+ 30.87,
+ 49.65,
+ 56.43
+ ],
+ "pedestrian": [
+ 30.5,
+ 42.79,
+ 46.95,
+ 52.66
+ ]
+ }
 }
