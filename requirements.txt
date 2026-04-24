@@ -1,0 +1,39 @@
+# Core dependencies for TransFusion-based 3D Object Detection
+# Tested on Python 3.7+ with CUDA-enabled PyTorch
+
+# Deep learning framework
+torch==1.7.1
+torchvision==0.8.2
+
+# OpenMMLab ecosystem
+mmcv-full==1.2.4
+mmdet==2.10.0
+
+# nuScenes
+nuscenes-devkit>=1.1.0
+
+# Scientific computing
+numpy
+scipy
+matplotlib
+pandas
+scikit-learn
+
+# 3D processing
+shapely
+trimesh
+plyfile
+
+# Utilities
+tqdm
+tensorboard
+pyquaternion
+numba
+opencv-python
+
+# Optional: experiment tracking
+# wandb
+
+# Notes:
+# - mmdet3d itself is installed from the bundled local copy (see docs/setup.md)
+# - For full installation instructions, see docs/setup.md

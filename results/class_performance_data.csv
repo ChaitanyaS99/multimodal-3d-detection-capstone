@@ -1,0 +1,11 @@
+class,average_precision,total_detections,high_confidence_detections,max_confidence_score,confidence_rate
+car,37.4,3910,97,0.556,2.480818414322251
+truck,0.7,357,0,0.093,0.0
+bus,1.0,106,0,0.053,0.0
+trailer,0.0,217,0,0.071,0.0
+construction_vehicle,0.0,2,0,0.004,0.0
+pedestrian,43.2,1011,1,0.316,0.09891196834817012
+motorcycle,0.0,419,0,0.034,0.0
+bicycle,0.0,257,0,0.022,0.0
+traffic_cone,0.0,7428,3,0.321,0.04038772213247173
+barrier,0.0,2493,0,0.223,0.0

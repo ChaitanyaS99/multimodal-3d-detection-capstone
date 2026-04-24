@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Datasets (too large to commit)
+data/
+nuscenes/
+*.bin
+*.pcd
+*.pcd.bin
+
+# Model checkpoints (too large to commit)
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# Working directories with experiment outputs
+work_dirs/
+runs/
+logs/
+wandb/
+
+# Cached files
+*.pkl
+*.npy
+*.npz
+*.cache
+
+# Build artifacts
+mmdet3d.egg-info/
+mmdet3d_installed/
+build/
+
+# Logs
+*.log
+install_log.txt
+
+# Large archives
+*.tar
+*.tar.gz
+*.zip
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment files
+.env
+*.env
