@@ -1,6 +1,6 @@
 # Results & Analysis
 
-This document presents the quantitative results, analytical findings, and key insights from the experimental work in this project.
+This document presents the quantitative results, analytical findings, and key insights from the experimental work performed in this project.
 
 ---
 
