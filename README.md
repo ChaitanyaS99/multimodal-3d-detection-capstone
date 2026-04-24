@@ -5,7 +5,7 @@ A research capstone investigating multi-modal 3D object detection using the **Tr
 **Author:** Chaitanya Suralkar
 **Advisor:** Dr. Eungjoo Lee — University of Arizona
 **Program:** M.S. Data Science, University of Arizona
-**Course:** INFO 698 — Capstone (Spring 2026)
+**Course:** INFO 698 Capstone (Spring 2026)
 
 ---
 
