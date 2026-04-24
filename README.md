@@ -3,7 +3,7 @@
 A research capstone investigating multi-modal 3D object detection using the **TransFusion** architecture on the **nuScenes** benchmark, with a systematic evaluation of optimization techniques across the detection pipeline.
 
 **Author:** Chaitanya Suralkar
-**Advisor:** Dr. Eungjoo Lee — VSI Lab, University of Arizona
+**Advisor:** Dr. Eungjoo Lee — University of Arizona
 **Program:** M.S. Data Science, University of Arizona
 **Course:** INFO 698 — Capstone (Spring 2026)
 
@@ -71,11 +71,9 @@ For results and analysis, see [`docs/results.md`](docs/results.md).
 
 Building on the findings of this work, the next research direction explores **physics-informed query initialization** — embedding ground-plane constraints, dimension-aware object priors, and geometric reasoning directly into the model's query generation stage. The goal is to move multimodal perception toward geometry-aware, physically grounded systems that are more robust under sparse data, occlusions, and sensor inconsistencies.
 
-Target venues: CVPR, ICRA/IROS.
-
 ## Acknowledgements
 
-This work builds on the official TransFusion implementation by Bai et al. (CVPR 2022) and uses the **nuScenes** dataset by nuTonomy. Special thanks to **Dr. Eungjoo Lee** of the VSI Lab at the University of Arizona for research supervision and guidance throughout the project, and to **Dr. Nitika Sharma** for capstone instruction.
+This work builds on the official TransFusion implementation by Bai et al. (CVPR 2022) and uses the **nuScenes** dataset by nuTonomy. Special thanks to **Dr. Eungjoo Lee** at the University of Arizona for research supervision and guidance throughout the project, and to **Dr. Nitika Sharma** for capstone instruction.
 
 ## References
 

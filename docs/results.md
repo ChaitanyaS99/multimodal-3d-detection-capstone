@@ -130,6 +130,4 @@ The findings collectively motivate a shift toward **physics-informed query initi
 - Leveraging **geometric reasoning** to improve cross-modal alignment quality
 - Moving toward **geometry-aware, physically grounded perception systems**
 
-Target venues: CVPR, ICRA/IROS.
-
 This direction directly addresses the bottlenecks identified above — improving feature alignment and representation quality through structured physical priors rather than additional training-time optimization.
